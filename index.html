@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Image Changer</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: sans-serif;
+        }
+
+        .content{
+            display: flex;
+            gap: 50px;
+            justify-content: space-around;
+        }
+
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Click to Change Image</h2> <br>
+
+    <div class="content">
+        <div class="part__one">
+            <img src="./images/Pizza_Hut_logo.svg.png" alt="image" id="myImg">
+            <br>
+            <button onclick="const img = document.getElementById('myImg');
+                    img.src = img.src.includes('01.png') ? '/images/02.png' :
+                    img.src = img.src.includes('02.png') ? '/images/03.png' : 
+                    img.src = img.src.includes('03.png') ? '/images/04.png' :
+                    '/images/01.png'">Change Image</button> <br>
+        </div>
+
+        <div class="part__two">
+            <img src="./images/Image.png" alt="image" id="myImg2">
+            <br>
+            <button onclick="const img = document.getElementById('myImg2');
+                    img.src = img.src.includes('1.png') ? '/images/2.png' :
+                    img.src = img.src.includes('2.png') ? '/images/3.png' : 
+                    img.src = img.src.includes('3.png') ? '/images/4.png' :
+                    '/images/1.png'">Change Image</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
